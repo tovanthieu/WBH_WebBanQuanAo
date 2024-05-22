@@ -822,11 +822,11 @@ section
 .main_slider
 {
 	width: 100%;
-	height: 700px;
+	height: 600px;
 	background-repeat: no-repeat;
-	background-size: cover;
 	background-position: center center;
 	margin-top: 150px;
+
 }
 .main_slider_content
 {
