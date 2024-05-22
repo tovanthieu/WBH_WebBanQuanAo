@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Giở hàng";
+
+}
+
+
+<link rel="stylesheet" type="text/css" href="~/assets/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/assets/styles/categories_responsive.css">
+<div class="container product_section_container">
+    <div class="row">
+        <div class="col product_section clearfix">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="/">Trang Chủ</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Sidebar -->
+            <!-- Main Content -->
+
+            <div class="row">
+                <div class="col-md-12" id="load_data">
+                    @* @using WBH_WebQuanAo.Common *@
+                    <table class="table">
+                        <tr class="text-center">
+                            <th>STT</th>
+                            <th>Ảnh sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Danh mục</th>
+                            <th>Giá</th>
+                            <th>Số lượng còn</th>
+                            <th style="width:100px;">Số lượng</th>
+                            <th>Thành tiền</th>
+                            <th style="width:200px;">
+
+                            </th>
+                        </tr>
+                        @if (Model != null && Model.Any())
+                        {
+                            var i = 0;
+                            var tongtien = decimal.Zero;
+                            foreach (var item in Model)
+                            {
+                                tongtien += item.TotalPrice;
+                                <tr class="text-center" id="trow_@item.ProductId">
+                                    <td>@(i + 1)</td>
+                                    <td><img src="@item.ProductImg" width="60" /></td>
+                                    <td>
+                                        <a href="/chi-tiet/@item.Alias-p@(item.ProductId)">
+                                            @item.ProductName
+                                        </a>
+                                    </td>
+                                    <td>@item.CategoryName</td>
+                                    @* <td>@Common.FormatNumber(item.Price, 0)</td> *@
+                                    <td>@item.QuantityInStock</td>
+                                    <td><input type="number" class="form-control" id="Quantity_@item.ProductId" value="@item.Quantity" min="1" data-max-quantity="@item.QuantityInStock" /></td>
+
+                                    @* <th>@Common.FormatNumber(item.TotalPrice, 2)</th> *@
+                                    <td>
+                                        <a href="#" data-id="@item.ProductId" class="btn btn-sm btn-danger btnDelete">Xóa</a>
+                                        <a href="#" data-id="@item.ProductId" class="btn btn-sm btn-success btnUpdate">Cập nhật</a>
+                                    </td>
+                                </tr>
+                                i++;
+                            }
+                            <tr>
+                                <th colspan="6" class="text-right">Tổng: </th>
+                               @*  <th class="text-center">@Common.FormatNumber(tongtien, 0)</th> *@
+                                <th></th>
+                            </tr>
+
+                        }
+                        else
+                        {
+                            <tr>
+                                <th colspan="7">Không có sản phẩm trong giỏ hàng!!</th>
+                            </tr>
+                        }
+                    </table>
+
+
+                </div>
+                <div class="col-md-12">
+                   @*  @if (ViewBag.CheckCart != null) *@
+                    @* { *@
+                        <div class="text-right">
+                            <a href="#" class="btn btn-danger btnDeleteAll">Xóa</a>
+                            <a href="shoppingcart/checkout" class="btn btn-success">Thanh toán</a>
+                        </div>
+                    @* } *@
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/assets/js/categories_custom.js"></script>
+}
