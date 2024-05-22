@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Colo Shop</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Colo Shop Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon">
+
+
+    <partial name="_P_Styles" />
+
+    @RenderSection("Styles", false)
+</head>
+
+<body>
+    <partial name="_P_Header" />
+
+    <div class="super_container">
+    @RenderBody()
+    </div>
+    <partial name="_P_Footer" />
+
+    <partial name="_P_Scripts" />
+
+    @RenderSection("Scripts", false)
+
+</body>
+</html>
