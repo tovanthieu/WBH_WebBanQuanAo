@@ -50,8 +50,8 @@ COLOR PALETTE
 }
 body
 {
-	font-family: 'Poppins', sans-serif;
-	font-size: 14px;
+	font-family: 'Arial', sans-serif;
+	font-size: 20px;
 	line-height: 23px;
 	font-weight: 400;
 	background: #FFFFFF;
@@ -72,8 +72,8 @@ ul
 }
 p
 {
-	font-family: 'Poppins', sans-serif;
-	font-size: 14px;
+	font-family: 'Arial', sans-serif;
+	font-size: 20px;
 	line-height: 1.7;
 	font-weight: 500;
 	color: #51545f;
@@ -131,7 +131,7 @@ h5{font-size: 16px;}
 h6{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Arial', sans-serif;
 	color: #282828;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -816,8 +816,7 @@ section
 {
 	color: #fe4c50;
 }
-.red_button
-{
+.red_button {
 	display: -webkit-inline-box;
 	display: -moz-inline-box;
 	display: -ms-inline-flexbox;
@@ -835,6 +834,9 @@ section
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	padding: 20px 50px; /* Tăng padding để nút rộng hơn */
+	font-size: 16px; /* Đảm bảo kích thước chữ phù hợp */
+	white-space: nowrap; /* Đảm bảo văn bản không xuống dòng */
 }
 .red_button:hover
 {
@@ -1051,15 +1053,15 @@ section
 	border: solid 1px #7f7f7f !important;
 	box-shadow: none !important;
 }
-.message_submit_btn
-{
+.message_submit_btn {
 	background: #1e1e27;
 	color: #FFFFFF;
 	text-transform: uppercase;
-	width: 165px;
+	width: auto; /* Để chiều rộng tự động */
 	border: none;
 	height: 46px;
 	cursor: pointer;
+	min-width: 250px; /* Tăng min-width để đảm bảo nút đủ rộng */
 }
 .message_submit_btn:hover
 {
@@ -1238,6 +1240,9 @@ textarea:hover
 /*********************************
 10. Footer
 *********************************/
+.footer h4, .footer p {
+	font-weight: normal; /* Loại bỏ việc sử dụng font-weight strong */
+}
 
 .footer_nav_container
 {
