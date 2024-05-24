@@ -56,40 +56,115 @@
 		</div>
 	</div>
 
-	<!-- Main Navigation -->
+    <!-- Main Navigation -->
+    <div class="main_nav_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <div class="logo_container">
+                        <a href="/">TP<span>shop</span></a>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="navbar_menu">
+                            <li><a href="/">Trang Chủ</a></li>
+                            <li><a href="/Product">Sản Phẩm</a></li>
+                            <li><a href="#">Giới Thiệu</a></li>
+                            <li><a href="/blog">Tin Tức</a></li>
+                            <li><a href="/Contact">Liên Hệ</a></li>
+                        </ul>
+                        <ul class="navbar_user">
+                            <li>
+                                <a href="#" id="search-icon">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li><a href="/User/Profile"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="checkout">
+                                <a href="/shoppingcart">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span id="checkout_items" class="checkout_items">2</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="hamburger_container">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="main_nav_container">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-right">
-					<div class="logo_container">
-						<a href="/">TP<span>shop</span></a>
-					</div>
-					<nav class="navbar">
-						<ul class="navbar_menu">
-							<li><a href="/">Trang Chủ</a></li>
-								<li><a href="/Product">Sản Phẩm</a></li>
-							<li><a href="#">Giới Thiệu</a></li>
-							<li><a href="/blog">Tin Tức</a></li>
-								<li><a href="/Contact">Liên Hệ</a></li>
-						</ul>
-						<ul class="navbar_user">
-							<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-							<li><a href="/User/Profile"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-							<li class="checkout">
-								<a href="/shoppingcart">
-									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-									<span id="checkout_items" class="checkout_items">2</span>
-								</a>
-							</li>
-						</ul>
-						<div class="hamburger_container">
-							<i class="fa fa-bars" aria-hidden="true"></i>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Search Modal -->
+    <div id="modal_show_search" class="modal_show_search">
+        <div class="modal_content_div">
+            <div class="input-group">
+                <input id="input_keyword_product" type="text" name="keyword" class="search-auto form-control" placeholder="Tìm kiếm sản phẩm muốn tìm ..." maxlength="50" autocomplete="off" aria-expanded="true" required="">
+                <button id="btnStartSpeak" class="btn btn-default" onclick="RunSpeech()" type="submit" aria-label="Tìm kiếm">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                <a onclick="document.getElementById('modal_show_search').style.display='none'" class="close div_close_btn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+            <form action="/product/search" method="get" class="nd-header-search-form" role="search">
+                <input type="hidden" name="type" value="product">
+                <ul class="list-group scroll_css" id="list_product_quick_search"></ul>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        /* Style for search modal */
+        .modal_show_search {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .modal_content_div {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .close.div_close_btn {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-auto {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .scroll_css {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+
+    <script>
+        document.getElementById('search-icon').addEventListener('click', function () {
+            document.getElementById('modal_show_search').style.display = 'flex';
+        });
+    </script>
+
+
 
 </header>
