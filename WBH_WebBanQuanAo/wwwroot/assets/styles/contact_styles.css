@@ -958,14 +958,12 @@ section
 .follow_us_contents h1,
 .get_in_touch_contents h1
 {
-	text-align: center;
 	font-size: 40px;
 	font-weight: 500;
 }
 .contact_contents p,
 .get_in_touch_contents p
 {
-	text-align: center;
 	font-size: 16px;
 	font-weight: 400;
 	margin-bottom: 0px;
