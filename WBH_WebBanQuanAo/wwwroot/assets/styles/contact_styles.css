@@ -449,8 +449,7 @@ section
 3.3 Account
 *********************************/
 
-.account
-{
+.account {
 	display: inline-block;
 	position: relative;
 	min-width: 50px;
@@ -458,6 +457,7 @@ section
 	text-align: center;
 	vertical-align: middle;
 	background: #1e1e27;
+	white-space: normal;
 }
 .account > a
 {
