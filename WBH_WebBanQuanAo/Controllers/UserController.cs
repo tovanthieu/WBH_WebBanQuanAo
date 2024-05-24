@@ -13,7 +13,10 @@ namespace WBH_WebBanQuanAo.Controllers
         {
             return View();
         }
-
+        public IActionResult Profile()
+        {
+            return View();
+        }
 
     }
 }

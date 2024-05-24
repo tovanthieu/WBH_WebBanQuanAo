@@ -1,0 +1,631 @@
+﻿@section Styles{
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/contact_styles.css">
+
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/contact_responsive.css">
+    <link href="~/css/style-min.css" rel="stylesheet" />
+    <link href="~/css/vendors.bundle.min.css" rel="stylesheet" />
+    <style>
+        /* Đảm bảo văn bản được căn giữa */
+        .text-center {
+            text-align: center;
+        }
+
+        /* Đảm bảo phần sidebar và form hiển thị đẹp */
+        .dashboard-sidebar {
+            margin-bottom: 20px;
+        }
+
+        /* Đảm bảo form được căn giữa */
+        .theme-card {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Khoảng cách giữa các form-row */
+        .form-row.row {
+            margin-bottom: 20px;
+        }
+
+        /* Căn giữa nút */
+        .btn_change_pass, .btn_change_pass_update {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Đảm bảo nút hiển thị đẹp */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            max-width: 200px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            white-space: nowrap;
+            margin: 0 auto;
+        }
+
+        /* Đảm bảo khoảng cách giữa các cột */
+        .col-md-6 {
+            margin-bottom: 20px;
+        }
+
+    </style>
+}
+
+
+<div class="container contact_container">
+    <div class="row">
+        <div class="col">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Đăng nhập</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+<section class="dashboard-section section-b-space bg_custom_1" style="padding-top:0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+
+                <div class="dashboard-sidebar bg-white">
+                    <div class="profile-top pt-2">
+                        <div class="profile-image">
+                            <img src="https://image.tmdt247.vn/uploads/images/UISYSTEM/710c59a2-3bba-4ca8-8b6a-1b9a52a39ec5.png" alt="Avatar" class="img-fluid" onerror="this.onerror=null;this.src='/assets/images/error/avatar.png';">
+                        </div>
+                        <div class="profile-detail">
+                            <h5>0961874429</h5>
+                            <h6>thiều Tô</h6>
+                        </div>
+                    </div>
+                    <div class="faq-tab">
+                        <ul class="nav nav-tabs bg-white">
+                            <li class="nav-item">
+                                <a class="nav-link bg-white " href="/account/profile">Thông tin tài khoản</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white  active" href="/order/view">Đơn hàng của tôi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white " href="/account/address">Sổ địa chỉ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white " href="/colection-voucher-coupon">Ví Voucher/Coupon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white" data-toggle="modal" data-target="#modal_signout" href="javascript:void(0)">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 bg-white" id="div_zone_order_list">
+                <div class="faq-content tab-content" id="top-tabContent">
+                    <div class="tab-pane fade show active" id="products">
+                        <section class="tab-product pt-0 mt-4">
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-12">
+                                    <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
+                                        <li class="nav-item li_status_order" data-id="-2">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
+                                                <i class="icofont icofont-ui-home"></i>Tất cả
+                                            </a>
+                                            <div class="material-border"></div>
+                                        </li>
+                                        <li class="nav-item li_status_order" data-id="0">
+                                            <a class="nav-link " data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
+                                                <i class="icofont icofont-ui-home"></i>Chờ xác nhận
+                                            </a>
+                                            <div class="material-border"></div>
+                                        </li>
+                                        <li class="nav-item li_status_order" data-id="1">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
+                                                <i class="icofont icofont-man-in-glasses"></i>Đã tiếp nhận
+                                            </a>
+                                            <div class="material-border"></div>
+                                        </li>
+                                        <li class="nav-item li_status_order" data-id="2">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
+                                                <i class="icofont icofont-contacts"></i>Đang vận chuyển
+                                            </a>
+                                            <div class="material-border"></div>
+                                        </li>
+                                        <li class="nav-item li_status_order" data-id="3">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
+                                                <i class="icofont icofont-contacts"></i>Đã giao
+                                            </a>
+                                            <div class="material-border"></div>
+                                        </li>
+                                        <li class="nav-item li_status_order" data-id="4">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
+                                                <i class="icofont icofont-contacts"></i>Đã hủy
+                                            </a>
+                                            <div class="material-border"></div>
+                                        </li>
+                                        <li class="nav-item li_status_order" data-id="5">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
+                                                <i class="icofont icofont-contacts"></i>Trả hàng
+                                            </a>
+                                            <div class="material-border"></div>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content nav-material">
+                                        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="top-home-tab">
+                                            <div class="mt-0">
+                                                <div class="top-sec">
+                                                    <label style="padding-right:6px;">Hiển thị: </label>
+                                                    <div class="dropdown bootstrap-select show-tick">
+                                                        <select class="selectpicker show-tick" id="select_show_records_search" data-style="btn-outline p-1" tabindex="-98">
+                                                            <option value="1" selected="">7 ngày gần đây</option>
+                                                            <option value="2">1 tháng gần đây</option>
+                                                            <option value="3">6 tháng gần đây</option>
+                                                            <option value="4">Tất cả đơn hàng</option>
+                                                        </select><button type="button" class="btn dropdown-toggle btn-outline p-1" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="select_show_records_search" title="7 ngày gần đây"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">7 ngày gần đây</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" style="overflow-y: initial!important;" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div>
+                                                    </div>
+                                                    <label id="label_count_order_item" style="padding-left:6px;color:#ea9310;">12 đơn</label>
+                                                </div>
+
+                                                <div class="div_order_list_custom row" id="div_order_list">
+                                                    <a href="/order/view/24052127" onclick="ViewDetail(event, this, '24052127')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#24052127 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Chờ xác nhận</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="/assets/images/error/product_1x1_medium.png" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Sầu riêng" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Sầu riêng
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Sầu riêng</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 2</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">5,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 2</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">5,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/24052125" onclick="ViewDetail(event, this, '24052125')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#24052125 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Đã giao</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="/assets/images/error/product_1x1_medium.png" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Bánh Trung Thu" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Bánh Trung Thu
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Bánh Trung Thu</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 2</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">25,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 2</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">25,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/24052123" onclick="ViewDetail(event, this, '24052123')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#24052123 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Đã hủy</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="https://image.tmdt247.vn/uploads/images/CEBE012D-8A3B-4A12-ADD1-FCAF368B7779/8013fcb2-092e-4957-8284-2a162f24f847.jpeg" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Nước Cam Ép" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Nước Cam Ép
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Nước Cam Ép</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">1,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">1,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/24052119" onclick="ViewDetail(event, this, '24052119')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#24052119 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Chờ xác nhận</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="/assets/images/error/product_1x1_medium.png" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Sầu riêng" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Sầu riêng
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Sầu riêng</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">5,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">5,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/24052117" onclick="ViewDetail(event, this, '24052117')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#24052117 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Đã hủy</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="/assets/images/error/product_1x1_medium.png" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Sầu riêng" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Sầu riêng
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Sầu riêng</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">5,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">5,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/24052115" onclick="ViewDetail(event, this, '24052115')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#24052115 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Đã tiếp nhận</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="/assets/images/error/product_1x1_medium.png" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Bánh Trung Thu" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Bánh Trung Thu
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Bánh Trung Thu</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">25,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">25,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/24052113" onclick="ViewDetail(event, this, '24052113')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#24052113 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Trả hàng</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="https://image.tmdt247.vn/uploads/images/CEBE012D-8A3B-4A12-ADD1-FCAF368B7779/8013fcb2-092e-4957-8284-2a162f24f847.jpeg" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Nước Cam Ép" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Nước Cam Ép
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Nước Cam Ép</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">1,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">1,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/2405215" onclick="ViewDetail(event, this, '2405215')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#2405215 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Đã giao</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="https://image.tmdt247.vn/uploads/images/CEBE012D-8A3B-4A12-ADD1-FCAF368B7779/8013fcb2-092e-4957-8284-2a162f24f847.jpeg" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Nước Cam Ép" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Nước Cam Ép
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Nước Cam Ép</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">38,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">38,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/2405214" onclick="ViewDetail(event, this, '2405214')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#2405214 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Chờ xác nhận</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="/assets/images/error/product_1x1_medium.png" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Sầu riêng" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Sầu riêng
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Sầu riêng</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">5,000đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">5,000đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a><a href="/order/view/2405213" onclick="ViewDetail(event, this, '2405213')" class="col-12 a_row_hover div_zone_order_item">
+                                                        <div class="col-12 orderTitle">
+                                                            <span class="mb-0">#2405213 <small class="text-dark">21-05-2024</small></span>
+                                                            <span class="mb-0 badge badge-info float-right">Chờ xác nhận</span>
+                                                        </div>
+                                                        <div class="col-12 row m-0 p-2">
+                                                            <div class="col-auto p-0">
+                                                                <img src="https://image.tmdt247.vn/uploads/images/D4C426C5-E422-489F-8CD3-DDBE91AAA4A2/0f06325e-6523-4d0c-a5e6-3b95ad64e64a.png" loading="lazy" class="img-fluid img-thumbnail" style="width:60px; height:60px;" alt="Cà chua" onerror="this.onerror=null;this.src='/assets/images/error/product_1x1_medium.png';">
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="div_desktop_custom text-muted">
+                                                                    Cà chua
+
+
+
+                                                                </div>
+                                                                <div class="mobile-cart-content text-center row">
+                                                                    <span class="col-12 text-muted">Cà chua</span>
+
+
+
+                                                                    <div class="col-12 row m-0">
+                                                                        <div class="col">
+                                                                            <small>SL: 1</small>
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <small class="m-0">29,999đ</small>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom">
+                                                                <small class="text-muted">SL: 1</small>
+                                                            </div>
+                                                            <div class="col-md-2 col-lg-2 col-xl-2 div_desktop_custom" style="text-align:right;">
+                                                                <span class="m-0">29,999đ</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="product-pagination product-pagination_no_border mt-4 mb-4">
+                                                    <div class="theme-paggination-block">
+                                                        <div class="row">
+                                                            <div class="col-xl-12 col-md-12 col-sm-12">
+                                                                <nav aria-label="Page navigation">
+                                                                    <ul class="pagination float-right" id="ul_pagination_order_list">
+                                                                        <li class="page-item active">
+                                                                            <a class="page-link p-2"><b>1</b></a>
+                                                                        </li>
+                                                                        <li class="page-item">
+                                                                            <a class="page-link p-2" href="javascript:void(0);" onclick="ChangePage(2,event)" title="Trang 2">2</a>
+                                                                        </li>
+                                                                        <li class="page-item">
+                                                                            <a class="page-link p-2" href="javascript:void(0);" title="Trang kế tiếp" onclick="ChangePage(2,event)" aria-label="Next">
+                                                                                <span aria-hidden="true">
+                                                                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                                </span>
+                                                                                <span class="sr-only">Next</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="page-item">
+                                                                            <a class="page-link p-2" href="javascript:void(0);" title="Trang cuối" onclick="ChangePage(2,event)" aria-label="Last">
+                                                                                <span aria-hidden="true">
+                                                                                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                                                                </span>
+                                                                                <span class="sr-only">Last</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 pb-2 bg-white" id="div_zone_order_view_detail" style="display:none;">
+                <div class="faq-content tab-content">
+                    <div class="tab-pane fade show active">
+                        <section class="tab-product pt-0">
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-12">
+                                    <div class="tab-content nav-material">
+                                        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="top-home-tab">
+                                            <div class="mt-0" id="div_order_detail">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+@section Scripts {
+<script src="~/assets/js/contact_custom.js"></script>
+
+}
