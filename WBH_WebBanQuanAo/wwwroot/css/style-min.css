@@ -431,7 +431,6 @@
 body {
     position: relative;
     background: #fff;
-    font-size: 14px
 }
 
     body.christmas .dark-light {
@@ -13601,7 +13600,9 @@ header.stickycls {
                 border-radius: 50%
             }
 
-        .theme-modal.cart-modal .modal-dialog .modal-content .modal-body .modal-bg.addtocart .media .media-body .buttons a {
+        .theme-modal.cart-modal .modal-dialog .modal-content .modal-
+        
+        .modal-bg.addtocart .media .media-body .buttons a {
             display: inline-block;
             font-size: 16px;
             padding: 6px 10px;
