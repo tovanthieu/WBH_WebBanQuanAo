@@ -1,0 +1,237 @@
+﻿<partial name="P_Styles" />
+
+<style>
+    /* Đảm bảo văn bản được căn giữa */
+    .text-center {
+        text-align: center;
+    }
+
+    /* Đảm bảo phần sidebar và form hiển thị đẹp */
+    .dashboard-sidebar {
+        margin-bottom: 20px;
+    }
+
+    /* Đảm bảo form được căn giữa */
+    .theme-card {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    /* Khoảng cách giữa các form-row */
+    .form-row.row {
+        margin-bottom: 20px;
+    }
+
+    /* Căn giữa nút */
+    .btn_change_pass, .btn_change_pass_update {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    /* Đảm bảo nút hiển thị đẹp */
+    .btn {
+        display: inline-block;
+        width: 100%;
+        max-width: 200px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        cursor: pointer;
+        border: none;
+        white-space: nowrap;
+        margin: 0 auto;
+    }
+
+    /* Đảm bảo khoảng cách giữa các cột */
+    .col-md-6 {
+        margin-bottom: 20px;
+    }
+
+</style>
+
+<div class="container contact_container">
+    <div class="row">
+        <div class="col">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Đăng nhập</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+<section class="dashboard-section section-b-space bg_custom_1 dashboard_section_profile" style="padding-top:0px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-3">
+                <div class="dashboard-sidebar bg-white">
+                    <div class="profile-top pt-2 text-center">
+                        <div class="profile-image">
+                            <img src="https://image.tmdt247.vn/uploads/images/UISYSTEM/710c59a2-3bba-4ca8-8b6a-1b9a52a39ec5.png" alt="Avatar" class="img-fluid" onerror="this.onerror=null;this.src='/assets/images/error/avatar.png';">
+                        </div>
+                        <div class="profile-detail">
+                            <h5>0961874429</h5>
+                            <h6>thiều Tô</h6>
+                        </div>
+                    </div>
+                    <div class="faq-tab">
+                        <ul class="nav nav-tabs bg-white">
+                            <li class="nav-item">
+                                <a class="nav-link bg-white  active" href="/account/profile">Thông tin tài khoản</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white " href="/order/">Đơn hàng của tôi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white " href="/account/address">Sổ địa chỉ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white " href="/colection-voucher-coupon">Ví Voucher/Coupon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-white" data-toggle="modal" data-target="#modal_signout" href="javascript:void(0)">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 bg-white" id="div_profile_form">
+                <div class="theme-card mt-4">
+                    <form action="/Account/EditProfile" method="post" class="theme-form" data-parsley-validate="" id="form_data" novalidate="">
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Ae-6edHLbtBox-e8VlbGTw3_mStssA0TSwdDHzNE7lY68qRDb8_wXpWs0CpGEhUb4D-RTUz8FrIR-XTLFm97aVLNzdl1dSCrm707izb9Ap8pw9eBJ-YgbckMDYPcRhymjdN-uXaNVV5b36rNEPjFNxijp4uR9Tm9yl4EkKiprmRVXs-rvjBNO2_qSWp7iq6_A">
+                        <input type="hidden" id="imageId" name="imageId" value="27176">
+                        <input type="hidden" id="imageSerialId" name="imageSerialId" value="">
+
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4 col-md-12">
+                                <div class="font-weight-bold text-uppercase text-center bg-light p-1 row bg-white mx-0 mb-1 border rounded">
+                                    <span class="pt-1 pb-1"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Ảnh đại diện</span>
+                                </div>
+                                <div>
+                                    <!--Image upload-->
+                                    <div class="col-12 col-sm-12 col-md-12" style="display:none;" id="div_upload_image">
+                                        <div class="col-12 filter-item">
+                                            <div class="gal-box mb-0">
+                                                <div class="dropify-wrapper" style="height: 163.2px;">
+                                                    <div class="dropify-message">
+                                                        <span class="file-icon">
+                                                            <p><span style="font-size:16px;">Chọn ảnh đại diện</span></p>
+                                                        </span>
+                                                        <p class="dropify-error">Ảnh không hợp lệ</p>
+                                                    </div>
+                                                    <div class="dropify-loader"></div>
+                                                    <div class="dropify-errors-container"><ul></ul></div>
+                                                    <input type="file" data-plugins="dropify" accept="image/jpeg, image/png" data-allowed-file-extensions="png jpg jpeg" data-height="150" data-max-file-size="5M" id="imageFile" name="imageFile">
+                                                    <button type="button" class="dropify-clear">Xóa</button>
+                                                    <div class="dropify-preview">
+                                                        <span class="dropify-render"></span>
+                                                        <div class="dropify-infos">
+                                                            <div class="dropify-infos-inner">
+                                                                <p class="dropify-filename">
+                                                                    <span class="file-icon"></span> 
+                                                                    <span class="dropify-filename-inner"></span>
+                                                                </p>
+                                                                <p class="dropify-infos-message">Chọn ảnh</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <a href="javascript:void(0)" class="text-info" onclick="ShowHidePanel('#div_view_image','#div_upload_image')">
+                                                <i class="fa fa-arrow-left"></i> Quay lại
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!--Image view-->
+                                    <div class="col-12 col-sm-12 col-md-12" id="div_view_image">
+                                        <div class="col-12 filter-item text-center">
+                                            <div class="gal-box mb-0">
+                                                <a href="https://image.tmdt247.vn/uploads/images/UISYSTEM/710c59a2-3bba-4ca8-8b6a-1b9a52a39ec5.png" class="image-popup">
+                                                        <img src="https://image.tmdt247.vn/uploads/images/UISYSTEM/710c59a2-3bba-4ca8-8b6a-1b9a52a39ec5.png" class="img-fluid" alt="Ảnh đại diện" id="img_avatar_image" onerror="this.onerror=null;this.src='/assets/images/error/avatar.png';">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <a href="javascript:void(0)" style="color: lightseagreen;margin-right:10px;" onclick="ShowHidePanel('#div_upload_image','#div_view_image')">
+                                                <i class="fa fa-pencil"></i> Thay đổi
+                                            </a>
+                                            <a href="javascript:void(0)" class="text-danger" onclick="RemoveAvatar()">
+                                                <i class="fa fa-trash"></i> Xóa
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-9 col-lg-8 col-md-12">
+                                <div class="form-row row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName">Họ: <span class="text-danger">(*)</span></label>
+                                        <input class="form-control" placeholder="Nhập họ" maxlength="30" required="" type="text" data-val="true" data-val-length="Họ có độ dài tối đa 30 ký tự" data-val-length-max="30" data-val-required="Vui lòng nhập họ" id="lastName" name="lastName" value="thiều">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName">Tên: <span class="text-danger">(*)</span></label>
+                                        <input class="form-control" placeholder="Nhập tên" maxlength="30" required="" type="text" data-val="true" data-val-length="Tên có độ dài tối đa 30 ký tự" data-val-length-max="30" data-val-required="Vui lòng nhập tên" id="firstName" name="firstName" value="Tô">
+                                    </div>
+                                </div>
+                                <div class="form-row row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email">Email: </label>
+                                        <input class="form-control" 
+                                           placeholder="Nhập email" 
+                                           maxlength="50" 
+                           
+                                           type="text" 
+                                           data-val="true" 
+                                           data-val-length="Email có độ dài tối đa 50 ký tự" 
+                                           data-val-length-max="50" 
+                                           data-val-regex="Email không hợp lệ!" 
+                                       
+                                           id="email" 
+                                           name="email" 
+                                           value="tovanthieu2002@gmail.com">
+
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="birthday">Ngày sinh: </label>
+                                        <input type="text" class="form-control" value="25-07-2002" id="birthday" name="birthday">
+                                    </div>
+                                </div>
+                                <div class="form-row row checkout-page">
+                                    <div class="col-md-6 mb-3 checkout-form">
+                                        <label for="gender">Giới tính: </label>
+                                        <select class="bg-white form-control" data-val="true" data-val-required="The gender field is required." id="gender" name="gender">
+                                            <option value="0" selected="selected">Nam</option>
+                                            <option value="1">Nữ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-2 text-center">
+                                <button type="button" class="btn btn-danger btn_change_pass">
+                                    <i class="fa fa-key" aria-hidden="true"></i> ĐỔI MẬT KHẨU
+                                </button>
+                                <button type="submit" class="btn btn-xs btn-solid w-auto float-right ladda-button btn_change_pass_update" dir="ltr" data-style="expand-left" id="btn_submit_form"><span class="ladda-label">
+                                    <i class="fa fa-floppy-o"></i> CẬP NHẬT
+                                </span><span class="ladda-spinner"></span></button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<partial name="P_Scripts" />
