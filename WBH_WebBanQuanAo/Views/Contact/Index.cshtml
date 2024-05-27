@@ -47,20 +47,20 @@
 		</div>
 
 		<div class="col-lg-6 get_in_touch_col">
-			<div class="get_in_touch_contents">
-				<h1>Nhập thông tin để chúng tôi liên hệ với bạn!</h1>
-				<form action="post">
-					<div>
-						<input id="input_name" class="form_input input_name input_ph" type="text" name="name" placeholder="Tên" required="required" data-error="Tên không được để trống">
-						<input id="input_email" class="form_input input_email input_ph" type="email" name="email" placeholder="Email" required="required" data-error="Email không được để trống">
-						<input id="input_phone" class="form_input input_phone input_ph" type="phone" name="phone" placeholder="Số Điện Thoại" required="required" data-error="Số điện thoại không được để trống">
-						<textarea id="input_message" class="input_ph input_message" name="message" placeholder="Ghi chú" rows="3" required data-error="Please, write us a message."></textarea>
-					</div>
-					<div>
-						<button id="review_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">Gửi tin nhắn cho chúng tôi</button>
-					</div>
-				</form>
-			</div>
+		    <div class="get_in_touch_contents">
+		        <h1>Nhập thông tin để chúng tôi liên hệ với bạn!</h1>
+		        <form asp-action="Contact" method="post">
+		            <div>
+		                <input id="input_name" class="form_input input_name input_ph" type="text" asp-for="Name" placeholder="Tên" required="required" data-error="Tên không được để trống">
+		                <input id="input_email" class="form_input input_email input_ph" type="email" asp-for="Email" placeholder="Email" required="required" data-error="Email không được để trống">
+		                <input id="input_phone" class="form_input input_phone input_ph" type="text" asp-for="Phone" placeholder="Số Điện Thoại" required="required" data-error="Số điện thoại không được để trống">
+		                <textarea id="input_message" class="input_ph input_message" asp-for="Note" placeholder="Ghi chú" rows="3" required data-error="Vui lòng nhập ghi chú"></textarea>
+		            </div>
+		            <div>
+		                <button id="review_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">Gửi tin nhắn cho chúng tôi</button>
+		            </div>
+		        </form>
+		    </div>
 		</div>
 
 	</div>
