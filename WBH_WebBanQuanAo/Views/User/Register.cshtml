@@ -16,33 +16,24 @@
 		</div>
 	</div>
 
-	<!-- Contact Us -->
-
-	<div class="row" style="justify-content: center;text-align: center;">
-		<div class="col-lg-12- get_in_touch_col">
-			<div class="get_in_touch_contents">
-				<h1>Nhập thông tin đăng ký</h1>
-				<form style="b" action="post">
-					<div>
-						<input id="input_name" class="form_input input_name input_ph" type="text" name="name" placeholder="Tên" required="required" data-error="Tên không được để trống">
-						<input id="input_name" class="form_input input_name input_ph" type="password" name="name" placeholder="Mật khẩu" required="required" data-error="Tên không được để trống">
-						<input id="input_email" class="form_input input_email input_ph" type="email" name="email" placeholder="Email" required="required" data-error="Email không được để trống">
-						<input id="input_website" class="form_input input_website input_ph" type="url" name="name" placeholder="số điện thoại" required="required" data-error="Name is required.">
-						<select id="input_gender" class="form_input input_ph" name="gender" required="required" data-error="Giới tính không được để trống">
-							<option value="" disabled selected>Chọn giới tính</option>
-							<option value="male">Nam</option>
-							<option value="female">Nữ</option>
-							<option value="other">Khác</option>
-						</select>
-					</div>
-					<div>
-						<button id="review_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">Đăng ký</button>
-						<p>Đã có tài khoản <a href="/user/login">Đăng nhập</a></p>
-					</div>
-				</form>
-			</div>
-		</div>
-
-	</div>
+    <!-- Contact Us -->
+    <div class="row" style="justify-content: center; text-align: center;">
+        <div class="col-lg-6 get_in_touch_col">
+            <div class="get_in_touch_contents">
+                <h1>Đăng ký</h1>
+                <form id="register_form" action="post">
+                    <div>
+                        <input id="register_email" class="form_input input_name input_ph" type="email" name="email" placeholder="Email" required="required" data-error="Email không được để trống">
+                        <input id="register_password" class="form_input input_name input_ph" type="password" name="password" placeholder="Mật khẩu" required="required" data-error="Mật khẩu không được để trống">
+                        <input id="register_confirm_password" class="form_input input_name input_ph" type="password" name="confirm_password" placeholder="Xác nhận mật khẩu" required="required" data-error="Xác nhận mật khẩu không được để trống">
+                    </div>
+                    <div>
+                        <button id="register_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">Đăng ký</button>
+                        <p>Đã có tài khoản <a href="/user/login">Đăng nhập</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <partial name="P_Scripts" />
