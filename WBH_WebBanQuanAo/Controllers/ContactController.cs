@@ -41,7 +41,7 @@ namespace WBH_WebBanQuanAo.Controllers
                     client.Disconnect(true);
                 }
 
-                return RedirectToAction("Success");
+                return Json(new { success = true });
             }
 
             // Nếu có lỗi, hiển thị lại form với thông tin đã nhập và lỗi
