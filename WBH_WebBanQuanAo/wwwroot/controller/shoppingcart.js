@@ -1,10 +1,10 @@
-﻿document.addEventListener('DOMContentLoaded', function () {
+﻿/*document.addEventListener('DOMContentLoaded', function () {
     // Bắt sự kiện khi nhấn vào nút "Mua Hàng"
     document.querySelector('.btnBuy').addEventListener('click', function (event) {
         event.preventDefault(); // Ngăn chặn hành động mặc định của nút
 
         // Kiểm tra nếu không có sản phẩm trong giỏ hàng
-        if (/* Kiểm tra điều kiện có sản phẩm trong giỏ hàng */) {
+        if (*//* Kiểm tra điều kiện có sản phẩm trong giỏ hàng *//*) {
             // Hiển thị thông báo SweetAlert2
             Swal.fire({
                 icon: 'warning',
@@ -17,4 +17,4 @@
             window.location.href = 'shoppingcart/checkout';
         }
     });
-});
+});*/
