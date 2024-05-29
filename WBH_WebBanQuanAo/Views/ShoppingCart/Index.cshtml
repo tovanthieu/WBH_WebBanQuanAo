@@ -3,10 +3,11 @@
     ViewBag.Title = "Giở hàng";
 
 }
+@section Styles{
+    <link href="~/assets/styles/shoppingcart_responsive.css" rel="stylesheet" />
+    <link href="~/assets/styles/shoppingcart_styles.css" rel="stylesheet" />
+}
 
-
-<link rel="stylesheet" type="text/css" href="~/assets/styles/categories_styles.css">
-<link rel="stylesheet" type="text/css" href="~/assets/styles/categories_responsive.css">
 <div class="container product_section_container">
     <div class="row">
         <div class="col product_section clearfix">
@@ -102,6 +103,6 @@
 </div>
 
 @section scripts {
-    <script src="~/assets/js/categories_custom.js"></script>
+    <script src="~/assets/js/shoppingcart_custom.js"></script>
     <script src="~/controller/shoppingcart.js"></script>
 }
