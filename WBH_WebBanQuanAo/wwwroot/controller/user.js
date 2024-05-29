@@ -48,31 +48,43 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('register_form').addEventListener('submit', function (event) {
         event.preventDefault(); // Ngăn chặn hành động mặc định của form
 
-        const email = document.getElementById('register_email').value;
+        const phone = document.getElementById('register_phone').value;
         const password = document.getElementById('register_password').value;
         const confirmPassword = document.getElementById('register_confirm_password').value;
+        const firstname = document.getElementById('register_firstname').value;
+        const lastname = document.getElementById('register_lastname').value;
+
         let warningMessage = 'Thông Báo:';
-        // Giả sử các điều kiện kiểm tra
-        const isEmailValid = email.includes('@'); // Kiểm tra đơn giản để xem email có chứa ký tự '@'
+
+        // Điều kiện kiểm tra
+        const isPhoneValid = /^\d{10}$/.test(phone); // Kiểm tra số điện thoại có đúng 10 chữ số
         const isPasswordValid = password.length >= 6; // Mật khẩu phải có ít nhất 6 ký tự
         const isConfirmPasswordValid = password === confirmPassword; // Mật khẩu và xác nhận mật khẩu phải trùng nhau
+        const isFirstNameValid = firstname.trim() !== ''; // Họ không được bỏ trống
+        const isLastNameValid = lastname.trim() !== ''; // Tên không được bỏ trống
 
-        if (isEmailValid && isPasswordValid && isConfirmPasswordValid) {
+        if (isPhoneValid && isPasswordValid && isConfirmPasswordValid && isFirstNameValid && isLastNameValid) {
             // Hiển thị thông báo thành công
             iziToast.success({
-                  message: 'Bạn đã đăng ký thành công!',
+                message: 'Bạn đã đăng ký thành công!',
                 position: 'topRight'
             });
         } else {
             // Hiển thị thông báo cảnh báo
-            if (!isEmailValid) {
-                warningMessage += '<br> Email không hợp lệ.';
+            if (!isPhoneValid) {
+                warningMessage += '<br> Số điện thoại không hợp lệ.';
             }
             if (!isPasswordValid) {
                 warningMessage += '<br> Mật khẩu phải có ít nhất 6 ký tự.';
             }
             if (!isConfirmPasswordValid) {
                 warningMessage += '<br> Mật khẩu và xác nhận mật khẩu không trùng nhau.';
+            }
+            if (!isFirstNameValid) {
+                warningMessage += '<br> Họ không được bỏ trống.';
+            }
+            if (!isLastNameValid) {
+                warningMessage += '<br> Tên không được bỏ trống.';
             }
             iziToast.warning({
                 message: warningMessage,
