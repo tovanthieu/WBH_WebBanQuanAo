@@ -1054,7 +1054,6 @@ section
 	box-shadow: none !important;
 }
 .message_submit_btn {
-	background: #1e1e27;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	width: auto; /* Để chiều rộng tự động */
