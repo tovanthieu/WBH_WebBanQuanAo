@@ -1,4 +1,7 @@
-﻿<partial name="P_Styles" />
+﻿@section Styles {
+    <link href="~/assets/styles/user_responsive.css" rel="stylesheet" />
+    <link href="~/assets/styles/user_styles.css" rel="stylesheet" />
+}
 
 <div class="container contact_container">
     <div class="row">
@@ -36,4 +39,8 @@
     </div>
 </div>
 
-<partial name="P_Scripts" />
+@section Scripts {
+    <script src="~/assets/js/user_custom1.js"></script>
+    <script src="~/assets/js/user_custom2.js"></script>
+    <script src="~/controller/user.js"></script>
+}
