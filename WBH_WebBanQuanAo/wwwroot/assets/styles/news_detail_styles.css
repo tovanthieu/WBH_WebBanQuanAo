@@ -5,9 +5,6 @@
 
 COLOR PALETTE
 
-#FF6347 - (Tomato)
-#989898 - (Spanish Grey) - Text Color
-#F5F9F8 - (White Smoke) - Background Color
 
 
 [Table of Contents]
@@ -22,13 +19,16 @@ COLOR PALETTE
 	3.5 Hamburger Menu
 	3.6 Logo
 4. Breadcrumbs
-5. Google Map
-6. Contact Us
-7. Follow Us
-8. Contact Form
-9. Newsletter
-10. Footer
-
+5. Single Product Section
+6. Product Details
+7. Tabs
+	7.1 Description
+	7.2. Additional Info
+	7.3 Reviews
+8. Add Review
+9. Benefit
+10. Newsletter
+11. Footer
 
 
 ******************************/
@@ -51,7 +51,7 @@ COLOR PALETTE
 body
 {
 	font-family: 'Arial', sans-serif;
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 23px;
 	font-weight: 400;
 	background: #FFFFFF;
@@ -449,7 +449,8 @@ section
 3.3 Account
 *********************************/
 
-.account {
+.account
+{
 	display: inline-block;
 	position: relative;
 	min-width: 50px;
@@ -457,7 +458,6 @@ section
 	text-align: center;
 	vertical-align: middle;
 	background: #1e1e27;
-	white-space: normal;
 }
 .account > a
 {
@@ -816,7 +816,8 @@ section
 {
 	color: #fe4c50;
 }
-.red_button {
+.red_button
+{
 	display: -webkit-inline-box;
 	display: -moz-inline-box;
 	display: -ms-inline-flexbox;
@@ -834,9 +835,6 @@ section
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-	padding: 20px 50px; /* Tăng padding để nút rộng hơn */
-	font-size: 16px; /* Đảm bảo kích thước chữ phù hợp */
-	white-space: nowrap; /* Đảm bảo văn bản không xuống dòng */
 }
 .red_button:hover
 {
@@ -918,118 +916,426 @@ section
 }
 
 /*********************************
-5. Google Map
+5. Single Product Section
 *********************************/
 
-.contact_container
+.single_product_container
 {
 	margin-top: 150px;
 	padding-bottom: 80px;
 	border-bottom: solid 1px #ebebeb;
 }
-#google_map
+.single_product_thumbnails
 {
-	width: 100%;
-	height: 507px;
-	margin-bottom: 59px;
+	height: 527px;
 }
-.map_container
+.single_product_thumbnails ul li
 {
+	position: relative;
+	height: 136px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.single_product_thumbnails ul li::after
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
-	box-shadow: 0px 27px 59px rgba(0, 0, 0, 0.15);
+	border: solid 1px #fe4c50;
+	content: '';
+	visibility: hidden;
 }
-#map
+.single_product_thumbnails ul li.active::after,
+.single_product_thumbnails ul li:hover::after
+{
+	visibility: visible;
+}
+.single_product_thumbnails ul li img
 {
 	width: 100%;
-	height: calc(100% + 30px);
 }
-
-/*********************************
-6. Contact Us
-*********************************/
-
-.contact_contents
+.image_col
 {
 	padding-right: 30px;
 }
-.contact_contents h1,
-.follow_us_contents h1,
-.get_in_touch_contents h1
+.single_product_image
 {
-	font-size: 40px;
-	font-weight: 500;
+	width: 100%;
+	height: 527px;
 }
-.contact_contents p,
-.get_in_touch_contents p
+.single_product_image_background
 {
-	font-size: 16px;
-	font-weight: 400;
-	margin-bottom: 0px;
-}
-.contact_contents div
-{
-	margin-top: 22px;
-}
-.contact_contents div:first-of-type
-{
-	margin-top: 39px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
 }
 
 /*********************************
-7. Follow Us
+6. Product Details
 *********************************/
 
-.follow_us_contents
+.product_details
 {
-	margin-top: 32px;
+	width: 100%;
 }
-.social
+.product_details_title
 {
-	margin-top: 20px;
+	font-weight: 500px;
+	line-height: 30px;
 }
-.social li
+.product_details_title p
 {
-	margin-right: 12px;
+	margin-top: 12px;
 }
-.social li:last-child
+.free_delivery
 {
-	margin-right: 0px;
+	background: #f5f5f5;
+	margin-top: 53px;
 }
-.social li a
+.free_delivery i
+{
+	display: inline-block;
+}
+.free_delivery span:last-child
+{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-transform: uppercase;
+}
+.free_delivery span:first-child
+{
+	display: inline-block;
+	margin-right: 19px;
+	font-size: 16px;
+	-webkit-transform: translateY(-1px);
+	-moz-transform: translateY(-1px);
+	-ms-transform: translateY(-1px);
+	-o-transform: translateY(-1px);
+	transform: translateY(-1px);
+}
+.original_price
+{
+	font-weight: 500;
+	color: #b9b4c7;
+	text-decoration: line-through;
+	line-height: 30px;
+	margin-top: 21px;
+}
+.product_price
+{
+	display: inline-block;
+	font-size: 24px;
+	color: #fe4c50;
+	font-weight: 500;
+	line-height: 30px;
+	margin-top: 2px;
+}
+.star_rating
+{
+	display: inline-block;
+	margin-left: 33px;
+}
+.star_rating li
+{
+	display: inline-block;
+	margin-right: -2px;
+	cursor: pointer;
+}
+.star_rating li i
+{
+	color: #fac451;
+}
+.product_color
+{
+	margin-top: 27px;
+}
+.product_color ul
+{
+	display: inline-block;
+	margin-left: 26px;
+}
+.product_color ul li
+{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-right: 29px;
+	cursor: pointer;
+}
+.quantity
+{
+	width: 100%;
+	height: 40px;
+	margin-top: 23px;
+}
+.quantity_selector
 {
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
+	width: 132px;
+	height: 100%;
+	border: solid 1px #e5e5e5;
+	margin-left: 29px;
+}
+.quantity_selector span
+{
+	font-weight: 500;
+	color: #232530;
+}
+.plus,
+.minus
+{
+	padding-left: 14px;
+	padding-right: 14px;
+	cursor: pointer;
+}
+.plus:hover,
+.minus:hover
+{
+	color: #b5aec4;
+}
+.add_to_cart_button
+{
+	width: 160px;
+	margin-left: 19px;
+	font-size: 12px !important;
+}
+.product_favorite
+{
 	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	-webkit-transition: all 300ms ease;
-	-moz-transition: all 300ms ease;
-	-ms-transition: all 300ms ease;
-	-o-transition: all 300ms ease;
-	transition: all 300ms ease;
+	height: 100%;
+	margin-left: 22px;
+	border: solid 1px #e5e5e5;
+	border-radius: 2px;
+	cursor: pointer;
 }
-.social li a i
+.product_favorite:hover::after
 {
-	color: #FFFFFF;
+	color: #fe4c50;
 }
-.social li:hover a
+.product_favorite::after
 {
-	transform: translateY(-5px);
-	box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+	font-family: 'FontAwesome';
+	content:'\f08a';
+	font-size: 14px;
+}
+.product_favorite.active::after
+{
+	content:'\f004';
+	color: #fe4c50;
 }
 
 /*********************************
-8. Contact Form
+7. Tabs
 *********************************/
 
+.tabs_section_container
+{
+	width: 100%;
+	padding-bottom: 80px;
+	border-bottom: solid 1px #ebebeb;
+}
+.tabs_container
+{
+	margin-top: 66px;
+	margin-bottom: 66px;
+}
+.tabs
+{
+
+}
+.tab
+{
+	margin-right: 50px;
+	cursor: pointer;
+}
+.tab:last-child
+{
+	margin-right: 0px;
+}
+.tab span
+{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #1e1e27;
+}
+.tab:hover span
+{
+	color: #b5aec4;
+}
+.tab.active span
+{
+	color: #fe4c50;
+	border-bottom: solid 1px #fe4c50;
+}
+.tab_container
+{
+	width: 100%;
+	display: none;
+}
+.tab_container.active
+{
+	display: block;
+}
+
+/*********************************
+7.1 Description
+*********************************/
+
+.desc_col
+{
+
+}
+.tab_title
+{
+	margin-bottom: 98px;
+}
+.tab_title h4
+{
+	display: inline-block;
+	color: #fe4c50;
+	border-bottom: solid 1px #fe4c50;
+}
+.tab_text_block
+{
+	margin-bottom: 133px;
+}
+.tab_text_block p
+{
+	font-weight: 400;
+	margin-top: 10px;
+}
+.tab_image
+{
+	width: 100%;
+	margin-bottom: 131px;
+}
+.tab_image img
+{
+	width: 100%;
+}
+.desc_last
+{
+	margin-bottom: 0px;
+}
+
+/*********************************
+7.2. Additional Info
+*********************************/
+
+.additional_info_col p span
+{
+	margin-left: 22px;
+}
+.additional_info_title
+{
+	margin-bottom: 48px;
+}
+
+/*********************************
+7.3 Reviews
+*********************************/
+
+.reviews_title
+{
+	margin-bottom: 58px;
+}
+.user_review_container
+{
+	width: 100%;
+	margin-bottom: 37px;
+}
+.reviews_col
+{
+	padding-right: 30px;
+}
+.user_pic
+{
+	width: 70px;
+	height: 70px;
+	background: #ebebeb;
+	border-radius: 50%;
+}
+.user_rating .star_rating
+{
+	margin-left: 5px;
+	margin-top: 13px;
+}
+.user_rating .star_rating li
+{
+	margin-right: -3px;
+}
+.user_rating .star_rating li i
+{
+	font-size: 12px;
+}
+.review
+{
+	padding-left: 30px;
+}
+.review_date
+{
+	color: #fe4c50;
+	margin-top: -4px;
+}
+.user_name
+{
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 18px;
+}
+.review p
+{
+	font-weight: 400;
+}
+
+/*********************************
+8. Add Review
+*********************************/
+
+.add_review
+{
+	margin-top: 94px;
+}
+#review_form > div
+{
+	margin-bottom: 40px;
+}
+#review_form div:nth-child(2) h1
+{
+	display: inline-block;
+}
+#review_form div:nth-child(2)
+{
+	margin-bottom: 20px;
+}
+#review_form > div:last-child
+{
+	margin-bottom: 0px;
+}
+.add_review h1
+{
+	font-size: 18px;
+	font-weight: 500;
+}
 .form_input
 {
 	display: block;
@@ -1037,78 +1343,6 @@ section
 	height: 50px;
 	border: solid 1px #e5e5e5;
 	padding-left: 20px;
-	font-size: 16px;
-	margin-bottom: 20px;
-}
-.input_message
-{
-	width: 100%;
-	margin-bottom: 15px;
-	font-size: 16px;
-	padding-bottom: 15px;
-}
-.form_input:focus,
-#newsletter_email:focus
-{
-	border: solid 1px #7f7f7f !important;
-	box-shadow: none !important;
-}
-.message_submit_btn {
-	color: #FFFFFF;
-	text-transform: uppercase;
-	width: auto; /* Để chiều rộng tự động */
-	border: none;
-	height: 46px;
-	cursor: pointer;
-	min-width: 250px; /* Tăng min-width để đảm bảo nút đủ rộng */
-}
-.message_submit_btn:hover
-{
-	background: #2b2b34 !important;
-}
-:focus
-{
-	outline: none !important;
-}
-.input_ph::-webkit-input-placeholder
-{
-	font-size: 16px !important;
-	font-weight: 400;
-	color: #b9b4c7 !important;
-}
-.input_ph:-moz-placeholder /* older Firefox*/
-{
-	font-size: 16px !important;
-	font-weight: 400;
-	color: #b9b4c7 !important;
-}
-.input_ph::-moz-placeholder /* Firefox 19+ */
-{
-	font-size: 16px !important;
-	font-weight: 400;
-	color: #b9b4c7 !important;
-}
-.input_ph:-ms-input-placeholder
-{
-	font-size: 16px !important;
-	font-weight: 400;
-	color: #b9b4c7 !important;
-}
-.input_ph::input-placeholder
-{
-	font-size: 16px !important;
-	font-weight: 400;
-	color: #b9b4c7 !important;
-}
-textarea
-{
-	border: solid 1px #e5e5e5;
-	padding-left: 20px;
-	padding-top: 15px;
-}
-textarea:hover
-{
-	border-color: #7f7f7f !important;
 }
 .input_name
 {
@@ -1152,7 +1386,60 @@ textarea:hover
 }
 
 /*********************************
-9. Newsletter
+9. Benefit
+*********************************/
+
+.benefit
+{
+	margin-top: 74px;
+}
+.benefit_row
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.benefit_col
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.benefit_item
+{
+	height: 100px;
+	background: #f3f3f3;
+	border-right: solid 1px #FFFFFF;
+	padding-left: 25px;
+}
+.benefit_col:last-child .benefit_item
+{
+	border-right: none;
+}
+.benefit_icon i
+{
+	font-size: 30px;
+	color: #fe4c50;
+}
+.benefit_content
+{
+	padding-left: 22px;
+}
+.benefit_content h6
+{
+	text-transform: uppercase;
+	line-height: 18px;
+	font-weight: 500;
+	margin-bottom: 0px;
+}
+.benefit_content p
+{
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 0px;
+	color: #51545f;
+}
+
+/*********************************
+10. Newsletter
 *********************************/
 
 .newsletter
@@ -1186,8 +1473,16 @@ textarea:hover
 	height: 46px;
 	background: #FFFFFF;
 	border: none;
-	font-size: 14px;
 	padding-left: 20px;
+}
+#newsletter_email:focus
+{
+	border: solid 1px #7f7f7f !important;
+	box-shadow: none !important;
+}
+:focus
+{
+	outline: none !important;
 }
 ::-webkit-input-placeholder
 {
@@ -1237,7 +1532,7 @@ textarea:hover
 }
 
 /*********************************
-10. Footer
+11. Footer
 *********************************/
 .footer h4, .footer p {
 	font-weight: normal; /* Loại bỏ việc sử dụng font-weight strong */
@@ -1305,8 +1600,4 @@ textarea:hover
 .footer_social ul li a:hover
 {
 	color: #fe4c50;
-}
-
-.li_test{
-	color: #FF6347;
 }

@@ -1,4 +1,8 @@
-﻿<partial name="P_ProfileStyles" />
+﻿@section Styles {
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/contact_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/contact_responsive.css">
+    <link href="~/css/style-min.css" rel="stylesheet" />
+}
 
 <div class="container contact_container">
     <div class="row">
@@ -182,4 +186,9 @@
     </div>
 </section>
 </div>
-<partial name="P_Scripts" />
+
+@section Scripts {
+    <script src="~/assets/js/categories_custom.js"></script>
+    <script src="~/assets/js/contact_custom.js"></script>
+    <script src="~/controller/user.js"></script>
+}

@@ -1,5 +1,7 @@
-﻿<partial name="P_Styles" />
-
+﻿@section Styles {
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/contact_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/contact_responsive.css">
+}
 <div class="container contact_container">
     <div class="row">
         <div class="col">
@@ -36,4 +38,8 @@
     </div>
 </div>
 
-<partial name="P_Scripts" />
+@section Scripts {
+    <script src="~/assets/js/categories_custom.js"></script>
+    <script src="~/assets/js/contact_custom.js"></script>
+    <script src="~/controller/user.js"></script>
+}

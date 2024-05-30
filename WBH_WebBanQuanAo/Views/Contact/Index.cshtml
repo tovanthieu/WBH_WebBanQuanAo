@@ -1,8 +1,13 @@
-﻿<partial name="P_Styles" />
+﻿@* <partial name="P_Styles" /> *@
 @model WBH_WebBanQuanAo.Models.Contact
 
 @{
     ViewData["Title"] = "Liên hệ";
+}
+@section Styles{
+    <link href="~/assets/styles/contact_styles.css" rel="stylesheet" asp-append-version="true"/>
+    <link href="~/assets/styles/contact_responsive.css" rel="stylesheet" />
+
 }
 
 <div class="container contact_container">
@@ -13,7 +18,7 @@
 
             <div class="breadcrumbs d-flex flex-row align-items-center">
                 <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="li_test"><a href="index.html">Trang chủ</a></li>
                     <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Liên hệ</a></li>
                 </ul>
             </div>
@@ -44,7 +49,7 @@
             <div class="follow_us_contents">
                 <h1>Theo dõi chúng tôi tại</h1>
                 <ul class="social d-flex flex-row">
-                    <li><a href="#" style="background-color: #3a61c9"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    @* <li><a href="#" style="background-color: #3a61c9"><i class="fa fa-facebook" aria-hidden="true"></i></a></li> *@
                     <li><a href="#" style="background-color: #41a1f6"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a href="#" style="background-color: #fb4343"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                     <li><a href="#" style="background-color: #8f6247"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -79,4 +84,7 @@
     </div>
 </div>
 
-<partial name="P_Scripts" />
+@section Scripts{
+    <script src="~/assets/js/contact_custom.js"></script>
+    <script src="~/controller/contact.js"></script>
+}
