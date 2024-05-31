@@ -1,8 +1,13 @@
-﻿<partial name="P_Styles" />
-@model WBH_WebBanQuanAo.Models.Contact
+﻿@model WBH_WebBanQuanAo.Models.Contact
 
 @{
     ViewData["Title"] = "Thành công";
+}
+
+@section Styles {
+    <link href="~/assets/styles/contact_styles.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/assets/styles/contact_responsive.css" rel="stylesheet" />
+
 }
 
 <div class="container contact_container">
@@ -31,4 +36,8 @@
         
 </div>
 
-<partial name="P_Scripts" />
+
+@section Scripts{
+    <script src="~/assets/js/contact_custom.js"></script>
+    <script src="~/controller/contact.js"></script>
+}
