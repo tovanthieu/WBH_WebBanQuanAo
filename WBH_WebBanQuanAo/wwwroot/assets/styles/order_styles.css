@@ -42,6 +42,41 @@ COLOR PALETTE
 /*********************************
 2. Body and some general stuff
 *********************************/
+.order-list .order-item {
+	background-color: #f8f9fa;
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+}
+
+	.order-list .order-item .order-image {
+		flex: 0 0 100px;
+		margin-right: 15px;
+	}
+
+		.order-list .order-item .order-image img {
+			max-width: 100%;
+			border-radius: 5px;
+		}
+
+	.order-list .order-item .order-details {
+		display: flex;
+		flex-grow: 1;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+		.order-list .order-item .order-details p {
+			margin: 0 10px;
+			min-width: 100px; /* Adjust as needed to ensure proper spacing */
+		}
+
+		.order-list .order-item .order-details strong {
+			font-weight: 600;
+		}
 
 *
 {
