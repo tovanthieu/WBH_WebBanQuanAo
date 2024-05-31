@@ -1,4 +1,4 @@
-﻿@section Styles{
+﻿@section Styles {
     <link href="~/assets/styles/order_responsive.css" rel="stylesheet" />
     <link href="~/assets/styles/order_styles.css" rel="stylesheet" />
     <link href="~/css/style-min.css" rel="stylesheet" />
@@ -7,16 +7,13 @@
 <div class="container contact_container">
     <div class="row">
         <div class="col">
-
             <!-- Breadcrumbs -->
-
             <div class="breadcrumbs d-flex flex-row align-items-center">
                 <ul>
                     <li><a href="index.html">Trang chủ</a></li>
                     <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Đăng nhập</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
 
@@ -24,7 +21,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
-
                     <div class="dashboard-sidebar bg-white">
                         <div class="profile-top pt-2">
                             <div class="profile-image">
@@ -38,16 +34,16 @@
                         <div class="faq-tab">
                             <ul class="nav nav-tabs bg-white">
                                 <li class="nav-item">
-                                    <a class="nav-link bg-white " href="/User/profile">Thông tin tài khoản</a>
+                                    <a class="nav-link bg-white" href="/User/profile">Thông tin tài khoản</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link bg-white  active" href="/order/view">Đơn hàng của tôi</a>
+                                    <a class="nav-link bg-white active" href="/order/view">Đơn hàng của tôi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link bg-white " href="/account/address">Sổ địa chỉ</a>
+                                    <a class="nav-link bg-white" href="/account/address">Sổ địa chỉ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link bg-white " href="/colection-voucher-coupon">Ví Voucher/Coupon</a>
+                                    <a class="nav-link bg-white" href="/colection-voucher-coupon">Ví Voucher/Coupon</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link bg-white" data-toggle="modal" data-target="#modal_signout" href="javascript:void(0)">Đăng xuất</a>
@@ -63,53 +59,52 @@
                                 <div class="row">
                                     <div class="col-sm-12 col-lg-12">
                                         <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
-                                            <li class="nav-item li_status_order" data-id="-2">
+                                            <li class="nav-item li_status_order" data-status="all">
                                                 <a class="nav-link active" data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
                                                     <i class="icofont icofont-ui-home"></i>Tất cả
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
-                                            <li class="nav-item li_status_order" data-id="0">
-                                                <a class="nav-link " data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
+                                            <li class="nav-item li_status_order" data-status="pending">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
                                                     <i class="icofont icofont-ui-home"></i>Chờ xác nhận
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
-                                            <li class="nav-item li_status_order" data-id="1">
+                                            <li class="nav-item li_status_order" data-status="accepted">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
                                                     <i class="icofont icofont-man-in-glasses"></i>Đã tiếp nhận
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
-                                            <li class="nav-item li_status_order" data-id="2">
+                                            <li class="nav-item li_status_order" data-status="shipping">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
                                                     <i class="icofont icofont-contacts"></i>Đang vận chuyển
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
-                                            <li class="nav-item li_status_order" data-id="3">
+                                            <li class="nav-item li_status_order" data-status="delivered">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
                                                     <i class="icofont icofont-contacts"></i>Đã giao
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
-                                            <li class="nav-item li_status_order" data-id="4">
+                                            <li class="nav-item li_status_order" data-status="cancelled">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
                                                     <i class="icofont icofont-contacts"></i>Đã hủy
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
-                                            <li class="nav-item li_status_order" data-id="5">
+                                            <li class="nav-item li_status_order" data-status="returned">
                                                 <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
                                                     <i class="icofont icofont-contacts"></i>Trả hàng
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
                                         </ul>
-                                        
 
                                         <section class="order-list pt-4">
-                                            <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center">
+                                            <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center" data-status="delivered">
                                                 <div class="order-image">
                                                     <img src="~/assets/images/product_1.png" alt="Product Image" class="img-fluid">
                                                 </div>
@@ -122,7 +117,7 @@
                                                     <p><strong>Trạng thái:</strong> Đã giao</p>
                                                 </div>
                                             </div>
-                                            <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center">
+                                            <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center" data-status="shipping">
                                                 <div class="order-image">
                                                     <img src="~/assets/images/product_1.png" alt="Product Image" class="img-fluid">
                                                 </div>
@@ -135,7 +130,7 @@
                                                     <p><strong>Trạng thái:</strong> Đang vận chuyển</p>
                                                 </div>
                                             </div>
-                                            <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center">
+                                            <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center" data-status="cancelled">
                                                 <div class="order-image">
                                                     <img src="~/assets/images/product_1.png" alt="Product Image" class="img-fluid">
                                                 </div>
@@ -149,8 +144,6 @@
                                                 </div>
                                             </div>
                                         </section>
-
-
                                     </div>
                                 </div>
                             </section>
@@ -180,6 +173,5 @@
     </section>
 </div>
 @section Scripts {
-    <script src="~/assets/js/order_custom.js"></script> 
-
+    <script src="~/assets/js/order_custom.js"></script>
 }
