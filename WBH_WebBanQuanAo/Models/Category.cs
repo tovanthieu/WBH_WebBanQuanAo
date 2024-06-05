@@ -1,4 +1,4 @@
-﻿namespace WBH_WebBanQuanAo.Models
+﻿/*namespace WBH_WebBanQuanAo.Models
 {
     public class Category
     {
@@ -6,3 +6,4 @@
         public string Name { get; set; }
     }
 }
+*/
