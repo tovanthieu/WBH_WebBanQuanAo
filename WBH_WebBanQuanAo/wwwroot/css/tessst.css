@@ -1,0 +1,46 @@
+﻿.product_item {
+    position: relative;
+    margin: 20px;
+}
+
+.product_name a {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.hover-details {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.product_item:hover .hover-details {
+    display: block;
+}
+
+.hover-details img {
+    width: 100%;
+    height: auto;
+}
+
+.hover-details .details-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hover-details .details-description {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.hover-details .details-price {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
