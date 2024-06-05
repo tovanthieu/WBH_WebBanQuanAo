@@ -22,19 +22,18 @@
 
 <script>
     $(document).ready(function () {
-        // Kiểm tra sự kiện cuộn của cửa sổ
-        $(window).on('scroll', function () {
-            if ($(this).scrollTop() > 0) {
-                $('#backtop').fadeIn(); // Hiện nút "back to top" khi cuộn xuống
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#backtop').fadeIn();
             } else {
-                $('#backtop').fadeOut(); // Ẩn nút "back to top" khi cuộn lên đầu trang
+                $('#backtop').fadeOut();
             }
         });
 
-        // Xử lý sự kiện click của nút "back to top"
-        $('#backtop').on('click', function () {
-            $('html, body').animate({ scrollTop: 0 }, 800); // Cuộn lên đầu trang
-            return false; // Ngăn chặn hành động mặc định của sự kiện click
+        $('#backtop').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 600);
         });
     });
 </script>
