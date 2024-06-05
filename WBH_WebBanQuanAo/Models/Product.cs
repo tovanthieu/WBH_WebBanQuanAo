@@ -1,4 +1,4 @@
-﻿namespace WBH_WebBanQuanAo.Models
+﻿/*namespace WBH_WebBanQuanAo.Models
 {
     public class Product
     {
@@ -11,3 +11,4 @@
         public string Color { get; set; }
     }
 }
+*/

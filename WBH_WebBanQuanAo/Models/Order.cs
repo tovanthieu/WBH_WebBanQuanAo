@@ -1,4 +1,4 @@
-﻿namespace WBH_WebBanQuanAo.Models
+﻿/*namespace WBH_WebBanQuanAo.Models
 {
     public class Order
     {
@@ -11,3 +11,4 @@
         public int Status { get; set; }
     }
 }
+*/
