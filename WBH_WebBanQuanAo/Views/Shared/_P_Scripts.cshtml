@@ -27,7 +27,7 @@
 
         // Kiểm tra sự kiện cuộn của cửa sổ
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 0) {
+            if ($(this).scrollTop() > 1000) {
                 $('#backtop').fadeIn(); // Hiện nút "back to top" khi cuộn xuống
             } else {
                 $('#backtop').fadeOut(); // Ẩn nút "back to top" khi cuộn lên đầu trang
