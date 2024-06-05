@@ -18,6 +18,10 @@ namespace WBH_WebBanQuanAo.Controllers
         {
             return View();
         }
+        public IActionResult Wishlist()
+        {
+            return View();
+        }
 
     }
 }
