@@ -1,6 +1,6 @@
-﻿@section Styles{
-<link href="~/assets/styles/shoppingcart_responsive.css" rel="stylesheet" />
-<link href="~/assets/styles/shoppingcart_styles.css" rel="stylesheet" />
+﻿@section Styles {
+    <link href="~/assets/styles/shoppingcart_responsive.css" rel="stylesheet" />
+    <link href="~/assets/styles/shoppingcart_styles.css" rel="stylesheet" />
 }
 
 <div class="container product_section_container">
@@ -15,194 +15,196 @@
 
                 </ul>
             </div>
+        </div>
+    </div>
 
-<section class="section-b-space section_place_order bg-light" data-select2-id="83">
-    <div class="container" data-select2-id="16">
-        <div class="checkout-page" data-select2-id="15">
-            <div class="checkout-form" data-select2-id="14">
-                <input type="hidden" id="input_feeship_calculate" value="-1">
-                <div class="row" data-select2-id="13">
-                    <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-xs-12 px-0 px-md-1" data-select2-id="12">
+    <section class="section-b-space section_place_order bg-light" data-select2-id="83">
+        <div class="container" data-select2-id="16">
+            <div class="checkout-page" data-select2-id="15">
+                <div class="checkout-form" data-select2-id="14">
+                    <input type="hidden" id="input_feeship_calculate" value="-1">
+                    <div class="row" data-select2-id="13">
+                        <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-xs-12 px-0 px-md-1" data-select2-id="12">
 
-                        <div class="card mb-3">
-                            <div class="card-body py-0">
+                            <div class="card mb-3">
+                                <div class="card-body py-0">
 
-                                <div class="row px-0" id="div_zone_cart" style="max-height: 300px;overflow-y: auto;">
-                                    <div class="col-12 px-0 div_zone_shop">
-                                        <div class="col-12   row m-0 p-2">
-                                            //hien thi ten san pham so luong don gia 
+                                    <div class="row px-0" id="div_zone_cart" style="max-height: 300px;overflow-y: auto;">
+                                        <div class="col-12 px-0 div_zone_shop">
+                                            <div class="col-12   row m-0 p-2">
+                                                //hien thi ten san pham so luong don gia
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
-                        </div>
 
-                        <form class="card" id="form_data_add_address" novalidate="novalidate" data-select2-id="form_data_add_address">
-                            <div class="card-body" data-select2-id="11">
-                                <div class="border-bottom color-default">
-                                                <span style="font-size:16px;font-weight:700;"><i class="fa fa-id-card-o fa-lg section__title--icon hide-on-desktop mx-2 "style="color: #fe4c50;"></i>Thông tin nhận hàng</span>
+                            <form class="card" id="form_data_add_address" novalidate="novalidate" data-select2-id="form_data_add_address">
+                                <div class="card-body" data-select2-id="11">
+                                    <div class="border-bottom color-default">
+                                        <span style="font-size:16px;font-weight:700;"><i class="fa fa-id-card-o fa-lg section__title--icon hide-on-desktop mx-2 " style="color: #fe4c50;"></i>Thông tin nhận hàng</span>
 
-                                </div>
-                                <div class="row mt-2 div_form_info_receiver_payment" data-select2-id="10">
-                                    <div class="col-12 col-xl-6" data-select2-id="9">
-                                        <div class="col-12 mt-3">
-                                            <div class="form-floating theme-form-floating log-in-form">
-                                                <input id="input_address_delivery_name" type="text" class="form-control" placeholder="Họ và tên" required="">
-                                              
-                                            </div>
-                                        </div>
-                                        <div class="col-12 mt-3">
-                                            <div class="form-floating theme-form-floating log-in-form">
-                                                <input onkeypress="return IsNumberKey(event)" id="input_address_delivery_phonenumber" type="text" name="receiverPhoneNumber" class="form-control" placeholder="Số điện thoại" required="">
-                                              
-                                            </div>
-                                        </div>
-                                       
-                                        <div class="col-12 mt-3">
-                                         
-                                            <input type="text" class="form-control" id="input_addressie_address_text" value="" placeholder="Địa Chỉ" required="" data-val="true" data-val-length="Số nhà/tổ/phu phố có độ dài tối đa 100 ký tự" data-val-length-max="100" maxlength="100" name="addressIeText">
-
-                                        </div>
-                                        <div class="form-group col-md-12 col-sm-12 col-xs-12 mb-3 mb-md-0">
-                                            <textarea class="form-control input-custom px-2" type="text" id="input_remark" rows="7" placeholder="Nhập ghi chú giao hàng (nếu có)" maxlength="250"></textarea>
-                                        </div>
                                     </div>
-                                    <div class="col-12 col-xl-6">
-                                        <div class="checkout-box mx-2 mt-2">
-                                                        <div class="checkout-title">
-                                                            <h4 class="fw-bold"><i class="fa fa-truck" style="color: #fe4c50;"></i>Vận chuyển</h4>
-                                                        </div>
+                                    <div class="row mt-2 div_form_info_receiver_payment" data-select2-id="10">
+                                        <div class="col-12 col-xl-6" data-select2-id="9">
+                                            <div class="col-12 mt-3">
+                                                <div class="form-floating theme-form-floating log-in-form">
+                                                    <input id="input_address_delivery_name" type="text" class="form-control" placeholder="Họ và tên" required="">
 
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-3">
+                                                <div class="form-floating theme-form-floating log-in-form">
+                                                    <input onkeypress="return IsNumberKey(event)" id="input_address_delivery_phonenumber" type="text" name="receiverPhoneNumber" class="form-control" placeholder="Số điện thoại" required="">
 
-                                            
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mt-3">
+
+                                                <input type="text" class="form-control" id="input_addressie_address_text" value="" placeholder="Địa Chỉ" required="" data-val="true" data-val-length="Số nhà/tổ/phu phố có độ dài tối đa 100 ký tự" data-val-length-max="100" maxlength="100" name="addressIeText">
+
+                                            </div>
+                                            <div class="form-group col-md-12 col-sm-12 col-xs-12 mb-3 mb-md-0">
+                                                <textarea class="form-control input-custom px-2" type="text" id="input_remark" rows="7" placeholder="Nhập ghi chú giao hàng (nếu có)" maxlength="250"></textarea>
+                                            </div>
                                         </div>
+                                        <div class="col-12 col-xl-6">
+                                            <div class="checkout-box mx-2 mt-2">
+                                                <div class="checkout-title">
+                                                    <h4 class="fw-bold"><i class="fa fa-truck" style="color: #fe4c50;"></i>Vận chuyển</h4>
+                                                </div>
 
 
-                                        <div class="checkout-box mx-2 mt-4 ">
-                                                        <div class="checkout-title">
-                                                            <h4 class="fw-bold"><i class="fa fa-money" style="color: #fe4c50;font-size: 27px;"></i> Phương thức thanh toán</h4>
-                                                        </div>
+
+                                            </div>
 
 
-                                            <div class="checkout-detail">
-                                                <div class="row g-4" id="">
-                                                    <div class="col-xxl-12 div_fee_ship_css_payment">
-                                                        <div class="delivery-option div_css_delivery_payment d-flex">
-                                                            <div class="delivery-category">
-                                                                <div class="shipment-detail">
-                                                                    <div class="form-check custom-form-check hide-check-box">
-                                                                        <input class="form-check-input" type="radio" name="input_payment_group" id="input_payment_group_1" value="1" checked="">
-                                                                        <label class="form-check-label" for="input_payment_group_1">
-                                                                            Thanh toán khi nhận hàng
-                                                                        </label>
+                                            <div class="checkout-box mx-2 mt-4 ">
+                                                <div class="checkout-title">
+                                                    <h4 class="fw-bold"><i class="fa fa-money" style="color: #fe4c50;font-size: 27px;"></i> Phương thức thanh toán</h4>
+                                                </div>
+
+
+                                                <div class="checkout-detail">
+                                                    <div class="row g-4" id="">
+                                                        <div class="col-xxl-12 div_fee_ship_css_payment">
+                                                            <div class="delivery-option div_css_delivery_payment d-flex">
+                                                                <div class="delivery-category">
+                                                                    <div class="shipment-detail">
+                                                                        <div class="form-check custom-form-check hide-check-box">
+                                                                            <input class="form-check-input" type="radio" name="input_payment_group" id="input_payment_group_1" value="1" checked="">
+                                                                            <label class="form-check-label" for="input_payment_group_1">
+                                                                                Thanh toán khi nhận hàng
+                                                                            </label>
+                                                                        </div>
+
                                                                     </div>
-
                                                                 </div>
+                                                                <span>
+                                                                    <i class="fa-solid fa-money-bill mx-2" style="color: #fe4c50;font-size: 25px;"></i>
+                                                                </span>
                                                             </div>
-                                                            <span>
-                                                                            <i class="fa-solid fa-money-bill mx-2" style="color: #fe4c50;font-size: 25px;"></i>
-                                                            </span>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-xxl-12 div_fee_ship_css_payment">
-                                                        <div class="delivery-option div_css_delivery_payment d-flex">
-                                                            <div class="delivery-category">
-                                                                <div class="shipment-detail">
-                                                                    <div class="form-check custom-form-check hide-check-box">
-                                                                        <input disabled="disabled" class="form-check-input" type="radio" name="input_payment_group" id="input_payment_group_2" value="2">
-                                                                        <label class="form-check-label" for="input_payment_group_2">
-                                                                            Chuyển khoản qua ngân hàng
-                                                                        </label>
-                                                                    </div>
+                                                        <div class="col-xxl-12 div_fee_ship_css_payment">
+                                                            <div class="delivery-option div_css_delivery_payment d-flex">
+                                                                <div class="delivery-category">
+                                                                    <div class="shipment-detail">
+                                                                        <div class="form-check custom-form-check hide-check-box">
+                                                                            <input disabled="disabled" class="form-check-input" type="radio" name="input_payment_group" id="input_payment_group_2" value="2">
+                                                                            <label class="form-check-label" for="input_payment_group_2">
+                                                                                Chuyển khoản qua ngân hàng
+                                                                            </label>
+                                                                        </div>
 
+                                                                    </div>
                                                                 </div>
+                                                                <span>
+                                                                    <i class="fa-solid fa-money-bill mx-2" style="color: #fe4c50;font-size: 25px;"></i>
+                                                                </span>
                                                             </div>
-                                                            <span>
-                                                                            <i class="fa-solid fa-money-bill mx-2" style="color: #fe4c50;font-size: 25px;"></i>
-                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+
                                         </div>
-
-
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
 
 
 
-                    </div>
-
-                    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-xs-12 px-0 px-md-1">
-
-                        <!--Product Gift-->
-                        <div id="div_product_gift" style="display: none;">
-                            <div class="card mb-3 div_product_gift">
-                                <div class="card-body">
-                                    <p class="mb-1">
-                                                    <i class="fa-solid fa-bolt flashit" style="font-size: 20px;color: #fe4c50;"></i>
-                                        <span class="fs-6 text-success fw-bolder">Quà tặng</span>
-                                    </p>
-
-
-                                    <table class="table mb-0 align-middle">
-                                        <tbody id="div_list_product_gift">
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
                         </div>
 
+                        <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-xs-12 px-0 px-md-1">
+
+                            <!--Product Gift-->
+                            <div id="div_product_gift" style="display: none;">
+                                <div class="card mb-3 div_product_gift">
+                                    <div class="card-body">
+                                        <p class="mb-1">
+                                            <i class="fa-solid fa-bolt flashit" style="font-size: 20px;color: #fe4c50;"></i>
+                                            <span class="fs-6 text-success fw-bolder">Quà tặng</span>
+                                        </p>
 
 
-                        <!-- Div remark -->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="mt-0">
-                                    <div class="order-box">
-                                        <div class="border-bottom color-default"><span style="font-size:16px;font-weight:500;"><i class="fas fa-comment-dollar mx-2" style="color: #357ebd;font-size: 25px"></i>Thanh toán</span></div>
-                                        <ul class="qty" style="line-height: 3.2em;display: grid;">
-                                            <li class="text-muted">
-                                                Tạm tính (<b style="font-weight:normal;" id="b_count_cart_item">1</b> sản phẩm)
-                                                <span style="float: right" class="" id="span_total_price_all_item">1đ</span>
-                                            </li>
-                                            <li class="text-muted">
-                                                Phí vận chuyển
-                                                <span style="float: right;" class="text-right" id="span_transport_fee">(chưa tính)</span>
-                                            </li>
-                                        </ul>
-                                        <ul class="total div_border">
-                                            <li class="m-0 fs-5">Tổng cộng </li>
-                                                        <li style="float: right;color: #fe4c50;"><span class="count text-right fs-5" id="span_total_price_payment">1đ</span></li>
-                                            <li class="text-right"><i class="small text-muted">(Đã bao gồm VAT nếu có)</i></li>
-                                        </ul>
-                                    </div>
-                                    <div class="payment-box">
-                                        <div class="text-end d-flex justify-content-between mt-5">
-                                                        <a href="/san-pham" class="btn-solid btn w-50 ladda-button" style="color: #fe4c50">
-                                                            <i class="fa fa-arrow-left mx-2" style="color: #fe4c50;"></i>
-                                                            Tiếp tục mua hàng
-                                                        </a>
-
-                                                        <button type="button" class="btn-solid btn w-30 ladda-button text-white" id="btn_place_order" dir="ltr" data-style="expand-left" style="background: #fe4c50">
-                                                <span class="ladda-label">
-                                                    Đặt hàng
-                                                </span><span class="ladda-spinner"></span>
-                                            </button>
-                                        </div>
+                                        <table class="table mb-0 align-middle">
+                                            <tbody id="div_list_product_gift">
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
 
+
+
+                            <!-- Div remark -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mt-0">
+                                        <div class="order-box">
+                                            <div class="border-bottom color-default"><span style="font-size:16px;font-weight:500;"><i class="fas fa-comment-dollar mx-2" style="color: #357ebd;font-size: 25px"></i>Thanh toán</span></div>
+                                            <ul class="qty" style="line-height: 3.2em;display: grid;">
+                                                <li class="text-muted">
+                                                    Tạm tính (<b style="font-weight:normal;" id="b_count_cart_item">1</b> sản phẩm)
+                                                    <span style="float: right" class="" id="span_total_price_all_item">1đ</span>
+                                                </li>
+                                                <li class="text-muted">
+                                                    Phí vận chuyển
+                                                    <span style="float: right;" class="text-right" id="span_transport_fee">(chưa tính)</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="total div_border">
+                                                <li class="m-0 fs-5">Tổng cộng </li>
+                                                <li style="float: right;color: #fe4c50;"><span class="count text-right fs-5" id="span_total_price_payment">1đ</span></li>
+                                                <li class="text-right"><i class="small text-muted">(Đã bao gồm VAT nếu có)</i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="payment-box">
+                                            <div class="text-end d-flex justify-content-between mt-5">
+                                                <a href="/san-pham" class="btn-solid btn w-50 ladda-button" style="color: #fe4c50">
+                                                    <i class="fa fa-arrow-left mx-2" style="color: #fe4c50;"></i>
+                                                    Tiếp tục mua hàng
+                                                </a>
+
+                                                <button type="button" class="btn-solid btn w-30 ladda-button text-white" id="btn_place_order" dir="ltr" data-style="expand-left" style="background: #fe4c50">
+                                                    <span class="ladda-label">
+                                                        Đặt hàng
+                                                    </span><span class="ladda-spinner"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 </div>
