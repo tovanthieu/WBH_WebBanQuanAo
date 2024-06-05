@@ -19,3 +19,22 @@
 <script src="~/lib/izitoast-master/dist/js/izitoast.min.js"></script>
 
 <script src="~/lib/sweetalert2/sweetalert2.all.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Kiểm tra sự kiện cuộn của cửa sổ
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() > 0) {
+                $('#backtop').fadeIn(); // Hiện nút "back to top" khi cuộn xuống
+            } else {
+                $('#backtop').fadeOut(); // Ẩn nút "back to top" khi cuộn lên đầu trang
+            }
+        });
+
+        // Xử lý sự kiện click của nút "back to top"
+        $('#backtop').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 }, 800); // Cuộn lên đầu trang
+            return false; // Ngăn chặn hành động mặc định của sự kiện click
+        });
+    });
+</script>
