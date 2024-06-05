@@ -50,7 +50,7 @@ COLOR PALETTE
 body
 {
 	font-family: 'Arial', sans-serif;
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 23px;
 	font-weight: 400;
 	background: #FFFFFF;
@@ -1711,4 +1711,8 @@ section
 .footer_social ul li a:hover
 {
 	color: #fe4c50;
+}
+
+.navbar_user {
+	font-size: 20px;
 }

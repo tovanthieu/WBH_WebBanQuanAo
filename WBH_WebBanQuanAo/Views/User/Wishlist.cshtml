@@ -11,7 +11,7 @@
             <div class="breadcrumbs d-flex flex-row align-items-center">
                 <ul>
                     <li><a href="index.html">Trang chủ</a></li>
-                    <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Đơn hàng của tôi</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Sản phẩm yêu thích</a></li>
                 </ul>
             </div>
         </div>
@@ -37,10 +37,10 @@
                                     <a class="nav-link bg-white" href="/User/profile">Thông tin tài khoản</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link bg-white active" href="/order/">Đơn hàng của tôi</a>
+                                    <a class="nav-link bg-white" href="/order/">Đơn hàng của tôi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link bg-white" href="/user/wishlist">Sản phẩm yêu thích</a>
+                                    <a class="nav-link bg-white active" href="/user/wishlist">Sản phẩm yêu thích</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link bg-white" href="/account/address">Sổ địa chỉ</a>
@@ -64,43 +64,7 @@
                                         <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
                                             <li class="nav-item li_status_order" data-status="all">
                                                 <a class="nav-link active" data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
-                                                    <i class="icofont icofont-ui-home"></i>Tất cả
-                                                </a>
-                                                <div class="material-border"></div>
-                                            </li>
-                                            <li class="nav-item li_status_order" data-status="pending">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
-                                                    <i class="icofont icofont-ui-home"></i>Chờ xác nhận
-                                                </a>
-                                                <div class="material-border"></div>
-                                            </li>
-                                            <li class="nav-item li_status_order" data-status="accepted">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
-                                                    <i class="icofont icofont-man-in-glasses"></i>Đã tiếp nhận
-                                                </a>
-                                                <div class="material-border"></div>
-                                            </li>
-                                            <li class="nav-item li_status_order" data-status="shipping">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
-                                                    <i class="icofont icofont-contacts"></i>Đang vận chuyển
-                                                </a>
-                                                <div class="material-border"></div>
-                                            </li>
-                                            <li class="nav-item li_status_order" data-status="delivered">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
-                                                    <i class="icofont icofont-contacts"></i>Đã giao
-                                                </a>
-                                                <div class="material-border"></div>
-                                            </li>
-                                            <li class="nav-item li_status_order" data-status="cancelled">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
-                                                    <i class="icofont icofont-contacts"></i>Đã hủy
-                                                </a>
-                                                <div class="material-border"></div>
-                                            </li>
-                                            <li class="nav-item li_status_order" data-status="returned">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
-                                                    <i class="icofont icofont-contacts"></i>Trả hàng
+                                                    <i class="icofont icofont-ui-home"></i>Danh sách sản phẩm yêu thích
                                                 </a>
                                                 <div class="material-border"></div>
                                             </li>
@@ -112,12 +76,9 @@
                                                     <img src="~/assets/images/product_1.png" alt="Product Image" class="img-fluid">
                                                 </div>
                                                 <div class="order-details ms-3 flex-grow-1 d-flex justify-content-between">
-                                                    <p><strong>Order #:</strong> 12345</p>
-                                                    <p><strong>Tên sản phẩm:</strong> Example Product 1</p>
-                                                    <p><strong>Số Lượng:</strong> 2</p>
+                                                    <p><strong>Tên sản phẩm:</strong> <a href="/product/detail"> Example Product 1</a></p>
                                                     <p><strong>Giá:</strong> $20.00</p>
-                                                    <p><strong>Ngày mua:</strong> 2024-05-31</p>
-                                                    <p><strong>Trạng thái:</strong> Đã giao</p>
+                                                    <p><strong>Ngày lưu:</strong> 2024-05-31</p>
                                                 </div>
                                             </div>
                                             <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center" data-status="shipping">
@@ -125,12 +86,9 @@
                                                     <img src="~/assets/images/product_1.png" alt="Product Image" class="img-fluid">
                                                 </div>
                                                 <div class="order-details ms-3 flex-grow-1 d-flex justify-content-between">
-                                                    <p><strong>Order #:</strong> 12346</p>
-                                                    <p><strong>Tên sản phẩm:</strong> Example Product 2</p>
-                                                    <p><strong>Số Lượng:</strong> 1</p>
+                                                    <p><strong>Tên sản phẩm:</strong> <a href="/product/detail">Example Product 2 </a></p>
                                                     <p><strong>Giá:</strong> $15.00</p>
-                                                    <p><strong>Ngày mua:</strong> 2024-05-30</p>
-                                                    <p><strong>Trạng thái:</strong> Đang vận chuyển</p>
+                                                    <p><strong>Ngày lưu:</strong> 2024-05-30</p>
                                                 </div>
                                             </div>
                                             <div class="order-item bg-light mb-3 p-3 border rounded d-flex align-items-center" data-status="cancelled">
@@ -138,12 +96,9 @@
                                                     <img src="~/assets/images/product_1.png" alt="Product Image" class="img-fluid">
                                                 </div>
                                                 <div class="order-details ms-3 flex-grow-1 d-flex justify-content-between">
-                                                    <p><strong>Order #:</strong> 12347</p>
-                                                    <p><strong>Tên sản phẩm:</strong> Example Product 3</p>
-                                                    <p><strong>Số Lượng:</strong> 3</p>
+                                                    <p><strong>Tên sản phẩm:</strong><a href="/product/detail"> Example Product 3 </a></p>
                                                     <p><strong>Giá:</strong> $30.00</p>
-                                                    <p><strong>Ngày mua:</strong> 2024-05-29</p>
-                                                    <p><strong>Trạng thái:</strong> Đã hủy</p>
+                                                    <p><strong>Ngày lưu:</strong> 2024-05-29</p>
                                                 </div>
                                             </div>
                                         </section>
