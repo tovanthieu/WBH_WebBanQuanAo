@@ -1,4 +1,4 @@
-﻿namespace WBH_WebBanQuanAo.Models
+﻿/*namespace WBH_WebBanQuanAo.Models
 {
     public class OrderDetail
     {
@@ -10,3 +10,4 @@
         public int Total { get; set; }
     }
 }
+*/
