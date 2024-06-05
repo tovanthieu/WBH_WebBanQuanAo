@@ -7,46 +7,6 @@
 </div>
 
 
-@section Styles {
-	<style>
-		.btn_xem_ngay {
-			position: absolute;
-			top: 78%;
-			left: 53%;
-			transform: translate(-50%, -50%);
-			padding: 10px 20px;
-			background-color: #fffff; /* Màu nền của nút */
-			color: black; /* Màu chữ */
-			text-decoration: none; /* Xóa gạch chân của liên kết */
-			font-size: 18px; /* Kích thước chữ */
-			border-radius: 5px; /* Bo tròn góc nút */
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
-			transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
-		}
-
-			.btn_xem_ngay:hover {
-                background-color: black; /* Màu nền của nút */
-                color: white; /* Màu chữ */
-			}
-	</style>
-}
-
-@section Scripts {
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.btn_xem_ngay').click(function (e) {
-				e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
-				$('html, body').animate({
-					scrollTop: 1200 // Cuộn xuống 1000px từ vị trí hiện tại
-				}, 600); // Thời gian cuộn là 600ms
-			});
-		});
-	</script>
-}
-
-</div>
-
 
 <partial name="P_MenuCategory" />
 

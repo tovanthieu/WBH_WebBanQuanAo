@@ -1,4 +1,4 @@
-/* JS Document */
+﻿/* JS Document */
 
 /******************************
 
@@ -429,4 +429,35 @@ jQuery(document).ready(function($)
 			}
 		}
 	}
+});
+
+$(document).ready(function () {
+	// Ẩn nút "back to top" khi trang mới được tải
+	$('#backtop').hide();
+
+	// Kiểm tra sự kiện cuộn của cửa sổ
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 1000) {
+			$('#backtop').fadeIn(); // Hiện nút "back to top" khi cuộn xuống
+		} else {
+			$('#backtop').fadeOut(); // Ẩn nút "back to top" khi cuộn lên đầu trang
+		}
+	});
+
+	// Xử lý sự kiện click của nút "back to top"
+	$('#backtop').click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 600); // Cuộn lên đầu trang trong 600ms
+		return false; // Ngăn chặn hành động mặc định của sự kiện click
+	});
+});
+
+$(document).ready(function () {
+	$('.btn_xem_ngay').click(function (e) {
+		e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+		$('html, body').animate({
+			scrollTop: 1200 // Cuộn xuống 1000px từ vị trí hiện tại
+		}, 600); // Thời gian cuộn là 600ms
+	});
 });
