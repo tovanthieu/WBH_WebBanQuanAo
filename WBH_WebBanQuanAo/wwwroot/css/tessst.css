@@ -5,13 +5,13 @@
 
 .product_name a {
     cursor: pointer;
-    color: blue;
-    text-decoration: underline;
 }
 
 .hover-details {
     display: none;
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
@@ -42,5 +42,21 @@
 .hover-details .details-price {
     margin-top: 10px;
     font-weight: bold;
-    color: green;
+    color: #FF6347;
+}
+
+.product-tooltip {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    z-index: 999;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.product:hover .product-tooltip {
+    display: block;
 }

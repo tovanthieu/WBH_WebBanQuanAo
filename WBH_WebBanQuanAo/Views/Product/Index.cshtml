@@ -140,7 +140,6 @@
                                         <div class="product_info">
                                             <h6 class="product_name">
                                                 <a href="/product/detail" class="hover-info"
-                                                   data-image="assets/images/product_1.png"
                                                    data-name="Máy ảnh kỹ thuật số Fujifilm X100T 16 MP (Màu Bạc)"
                                                    data-description="Đây là một máy ảnh kỹ thuật số chất lượng cao với độ phân giải 16 MP, lý tưởng để chụp những bức ảnh tuyệt vời. Nó đi kèm với thiết kế màu bạc mịn màng và các tính năng tiên tiến cho nhiếp ảnh chuyên nghiệp."
                                                    data-price="$520.00">
@@ -365,7 +364,7 @@
                     const price = link.getAttribute('data-price');
 
                     hoverDetails.innerHTML = `
-                        <img src="${image}" alt="${name}">
+
                         <div class="details-name">${name}</div>
                         <div class="details-description">${description.substring(0, 200)}</div>
                         <div class="details-price">${price}</div>
@@ -375,6 +374,7 @@
                     const rect = link.getBoundingClientRect();
                     hoverDetails.style.top = rect.bottom + 'px';
                     hoverDetails.style.left = rect.left + 'px';
+
                 });
 
                 link.addEventListener('mouseleave', function () {
