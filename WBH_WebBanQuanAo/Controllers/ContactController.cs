@@ -15,7 +15,7 @@ namespace WBH_WebBanQuanAo.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contact(Contact formData)
+        public IActionResult Contact(M_Contact formData)
         {
             if (ModelState.IsValid)
             {
