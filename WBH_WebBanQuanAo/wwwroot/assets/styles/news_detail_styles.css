@@ -812,10 +812,9 @@ section
 	font-weight: 700;
 	text-transform: uppercase;
 }
-.logo_container a span
-{
-	color: #fe4c50;
-}
+	.logo_container a span {
+		color: #1e1e27;
+	}
 .red_button
 {
 	display: -webkit-inline-box;
