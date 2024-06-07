@@ -1,4 +1,8 @@
 @charset "utf-8";
+@font-face {
+    font-family: 'mokotofont';
+    src: url('../fonts/mokotofont.ttf') format('truetype');
+}
 /* CSS Document */
 
 /******************************
@@ -798,6 +802,7 @@ section {
 *********************************/
 
 .logo_container {
+    font-family: mokotofont;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -816,7 +821,7 @@ section {
     }
 
         .logo_container a span {
-            color: #fe4c50;
+            color: #1e1e27;
         }
 
 /*********************************

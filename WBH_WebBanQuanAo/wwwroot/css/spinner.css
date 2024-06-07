@@ -1,0 +1,68 @@
+﻿@font-face {
+    font-family: 'mokotofont';
+    src: url('../fonts/mokotofont.ttf') format('truetype');
+}
+#loading-spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(https://t4.ftcdn.net/jpg/06/11/71/63/360_F_611716322_6eT5fx5Uh65d0hRU584zsVcFG9gQVVMJ.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.spinner-container {
+    position: relative;
+    width: 200px; /* Đặt kích thước spinner-container tương ứng với kích thước của logo */
+    height: 200px; /* Đặt kích thước spinner-container tương ứng với kích thước của logo */
+    text-align: center; /* Canh giữa nội dung trong spinner-container */
+}
+
+.spinner-logo {
+    width: 150px; /* Đặt kích thước của logo */
+    height: 150px; /* Đặt kích thước của logo */
+    background: url('../assets/images/logo.png') no-repeat center center;
+    background-size: contain;
+    border-radius: 50%; /* Tạo hình tròn cho logo */
+    position: relative;
+    z-index: 1; /* Đảm bảo logo hiển thị trên vòng tròn */
+}
+
+    .spinner-logo::before {
+        content: 'TPSHOP'; /* Thêm nội dung TP SHOP vào phía trên logo */
+        position: absolute;
+        top: -30px; /* Điều chỉnh vị trí của chữ TP SHOP */
+        left: 50%;
+        font-family: mokotofont ;
+        transform: translateX(-50%); /* Canh giữa chữ TP SHOP */
+        font-size: 17px; /* Điều chỉnh kích thước chữ */
+        color: black; /* Màu chữ */
+    }
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    border-top: 15px solid #fe4c50;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Đảm bảo vòng tròn quay nằm dưới logo */
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
