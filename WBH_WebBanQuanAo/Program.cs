@@ -49,7 +49,7 @@ app.MapControllerRoute(
 	defaults: new { controller = "Contact", action = "Index" });
 app.Use(async (context, next) =>
 {
-	if (context.Request.Path.Equals("/contact/register", StringComparison.OrdinalIgnoreCase) || context.Request.Path.Equals("/contact", StringComparison.OrdinalIgnoreCase))
+	if (context.Request.Path.Equals("/contact/index", StringComparison.OrdinalIgnoreCase) || context.Request.Path.Equals("/contact", StringComparison.OrdinalIgnoreCase))
 	{
 		context.Response.Redirect("/lien-he");
 	}
@@ -133,7 +133,7 @@ app.MapControllerRoute(
 	defaults: new { controller = "Order", action = "Index" });
 app.Use(async (context, next) =>
 {
-	if (context.Request.Path.Equals("/Order", StringComparison.OrdinalIgnoreCase))
+	if (context.Request.Path.Equals("/Order", StringComparison.OrdinalIgnoreCase)|| context.Request.Path.Equals("/Order/index", StringComparison.OrdinalIgnoreCase))
 	{
 		context.Response.Redirect("/don-hang-cua-toi");
 	}
@@ -150,7 +150,7 @@ app.MapControllerRoute(
 	defaults: new { controller = "ShoppingCart", action = "Index" });
 app.Use(async (context, next) =>
 {
-	if (context.Request.Path.Equals("/shoppingcart", StringComparison.OrdinalIgnoreCase))
+	if (context.Request.Path.Equals("/shoppingcart", StringComparison.OrdinalIgnoreCase)||context.Request.Path.Equals("/shoppingcart/index", StringComparison.OrdinalIgnoreCase))
 	{
 		context.Response.Redirect("/gio-hang");
 	}
@@ -185,7 +185,7 @@ app.MapControllerRoute(
 	defaults: new { controller = "News", action = "Index" });
 app.Use(async (context, next) =>
 {
-	if (context.Request.Path.Equals("/News", StringComparison.OrdinalIgnoreCase))
+	if (context.Request.Path.Equals("/News", StringComparison.OrdinalIgnoreCase) || context.Request.Path.Equals("/News/index", StringComparison.OrdinalIgnoreCase))
 	{
 		context.Response.Redirect("/danh-sach-tin-tuc");
 	}
@@ -202,7 +202,7 @@ app.MapControllerRoute(
 	defaults: new { controller = "Blog", action = "Index" });
 app.Use(async (context, next) =>
 {
-	if (context.Request.Path.Equals("/Blog", StringComparison.OrdinalIgnoreCase))
+	if (context.Request.Path.Equals("/Blog", StringComparison.OrdinalIgnoreCase) || context.Request.Path.Equals("/Blog/index", StringComparison.OrdinalIgnoreCase))
 	{
 		context.Response.Redirect("/danh-sach-gioi-thieu");
 	}
